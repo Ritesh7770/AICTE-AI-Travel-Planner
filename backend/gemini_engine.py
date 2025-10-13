@@ -16,13 +16,11 @@ def generate_itinerary(destination, budget, duration, interests):
     """
 
     try:
-        
         model = genai.GenerativeModel("gemini-2.5-pro")
         response = model.generate_content(prompt)
         return response.text.strip()
     except Exception as e:
-        
-       try:
+        try:
             model = genai.GenerativeModel("gemini-pro")
             response = model.generate_content(prompt)
             return response.text.strip()

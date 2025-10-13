@@ -19,7 +19,7 @@ if st.button("✨ Generate My Itinerary"):
             st.subheader("📍 Destination Info")
             st.write(location.get("name", "N/A"))
             st.write(f"Lat: {location.get('lat', 'N/A')} | Lon: {location.get('lon', 'N/A')}")
-            
+
             plan = get_travel_plan(destination, budget, duration, interests)
             st.subheader("🧭 Personalized Itinerary")
             st.write(plan)
